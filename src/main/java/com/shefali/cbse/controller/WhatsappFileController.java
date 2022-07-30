@@ -22,7 +22,7 @@ public class WhatsappFileController {
     private final WhatsappFileService fileService;
 
     @PostMapping(consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
-    @Operation(description = "Analyses a valid txt file generated from Whatsapp", summary = "Scans through a txt file and returns analysis")
+    @Operation(summary = "Scans through a txt file and returns analysis")
     public WhatsappAnalysisResponse uploadWhatsappFile(@RequestPart MultipartFile multipartFile) {
         return fileService.analyseMessages(multipartFile);
     }
