@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/love")
 public class ShefaliController {
 
-    private static final String LOVELY_MESSAGE = "This is to hereby inform you, that your boyfriend loves you a lot %sg";
+    private static final String LOVELY_MESSAGE = "This is to hereby inform you, that your boyfriend loves you a lot %s";
 
     @GetMapping
     public String getLovelyMessages(@RequestParam (defaultValue = "Shefali") String name) {
